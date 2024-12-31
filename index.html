@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>FoundLand Musical | Home</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logo/cube.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="shows.html">SHOWS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="joinus.html">JOIN US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="mainTitle">
+                <h1>FoundLand Musical</h1>
+                <p>We are a Registered Student Organization at UW-Madison consisting mainly of Mandarin-speaking students.<br>We focus on adapting and recreating Chinese original musicals<br>and classical musicals from around the globe.</p>
+            </div>
+
+            <div class="icons">
+                <a href="https://www.youtube.com/@foundlandmusical_uwmadison2021"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://instagram.com/foundlandmusical_uwmadison?igshid=YTQwZjQ0NmI0OA=="><i class="fa fa-instagram"></i></a>
+                <a href="https://mp.weixin.qq.com/s/iESr0ppFC4_Vs8DGrX5yzA"><i class="fa fa-weixin"></i></a>
+            </div>
+        </section>
+
+        <!-- JavaScript for Menu Toggle -->
+        <script>
+            var navLinks = document.getElementById("navLinks")
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+        </script>
+    </body>
+</html>

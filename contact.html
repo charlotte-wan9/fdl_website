@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>FoundLand Musical | Contact</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logo/cube.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="shows.html">SHOWS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="joinus.html">JOIN US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="contact-us">
+                <div class="contact-col">
+                    <div>
+                        <a href="https://www.youtube.com/@foundlandmusical_uwmadison2021"><i class="fa fa-youtube-play"></i></a>
+                        <span><h5>@foundlandmusical_uwmadison2021</h5></span>
+                    </div>
+                    <div>
+                        <a href="https://instagram.com/foundlandmusical_uwmadison?igshid=YTQwZjQ0NmI0OA=="><i class="fa fa-instagram"></i></a>
+                        <span><h5>@foundlandmusical_uwmadison</h5></span>
+                    </div>
+                    <div>
+                        <a href="https://mp.weixin.qq.com/s/iESr0ppFC4_Vs8DGrX5yzA"><i class="fa fa-weixin"></i></a>
+                        <span><h5>@foundlandmusical</h5></span>
+                    </div>
+                    <div>
+                        <a href="mailto:fdlandmusical@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                        <span><h5>fdlandmusical@gmail.com</h5></span>
+                    </div>
+                </div>
+
+                <div class="contact-col">
+                    <form action="form-handler.php" method="post">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter email address" required>
+                        <input type="text" name="subject" placeholder="Enter your subject">
+                        <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                        <button type="submit" class="button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- JavaScript for Menu Toggle -->
+        <script>
+            var navLinks = document.getElementById("navLinks")
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+        </script>
+    </body>
+</html>
