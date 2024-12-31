@@ -473,11 +473,11 @@ button:hover{
     /* Full header */
 
     /* Join us & contact Page */
-    .textbox p{
+    .textbox-athiti p{
         font-size: 26px;
     }
 
-    .contact-us, .textbox{
+    .contact-us, .textbox-athiti{
         display: unset;
         top: 15%;
     }
