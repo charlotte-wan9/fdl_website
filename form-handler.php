@@ -1,22 +1,31 @@
 <?php
-$name = $_POST['name'];
-$visitor_email = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $visitor_email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-$email_from = 'visitor_email';
+    $email_from = 'no-reply@foundlandmusicaluw.org'; // Use your domain email if you have one
+    $email_subject = 'New Contact Form Submission';
 
-$email_subject = 'New Form Submission';
+    $email_body = "User Name: $name\n".
+                  "User Email: $visitor_email\n".
+                  "Subject: $subject\n\n".
+                  "User Message:\n$message\n";
 
-$email_body = "User Name: $name.\n".
-              "User Email: $visitor_email.\n".
-              "Subject: $subject.\n".
-              "User Message: $message .\n";
+    $to = 'fdlandmusical@gmail.com';
 
-$to = 'fdlandmusical@gmail.com';
-$headers = "From: $email_from \r\n";
-$headers .= "Reply-To: $visitor_email \r\n";
+    $headers = "From: $email_from\r\n";
+    $headers .= "Reply-To: $visitor_email\r\n";
 
-mail($to, $email_subject, $email_body, $headers);
-header("Location: contact.html")
+    if (mail($to, $email_subject, $email_body, $headers)) {
+        header("Location: contact.html?status=success");
+    } else {
+        header("Location: contact.html?status=error");
+    }
+    exit();
+} else {
+    http_response_code(405); // triggers only if someone tries GET
+    echo "405 Method Not Allowed";
+}
 ?>
