@@ -4,7 +4,7 @@ $visitor_email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-$email_from = 'foundlandmusicaluw.org'; // should be the domain name
+$email_from = 'visitor_email';
 
 $email_subject = 'New Form Submission';
 
